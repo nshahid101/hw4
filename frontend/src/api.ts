@@ -1,4 +1,7 @@
-export const API_BASE = "http://localhost:8000";
+// Overridable per build via Vite's mode-specific .env files (.env.development
+// for `npm run dev`, .env.production for `npm run build`), so the same code
+// talks to a local backend in dev and the deployed Render backend in prod.
+export const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:8000";
 
 export interface SizeStock {
   size: string;
