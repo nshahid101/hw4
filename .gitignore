@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Local-only data pack (campus_customs.db + product images) — not committed.
+# See README.md for how to get this and where to place it.
+/data/
+data.zip
+
+# Python
+backend/.venv/
+backend/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db

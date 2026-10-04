@@ -1,0 +1,67 @@
+:root {
+  --navy: #0f2a4a;
+  --yale-blue: #00356b;
+  --cream: #f7f3ea;
+  --dark-gray: #2f2f35;
+  --muted-red: #8f3d3d;
+  --gold: #c7a86a;
+  --border: #ddd6c4;
+
+  --sans: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --heading: 'Georgia', 'Times New Roman', serif;
+
+  color-scheme: light;
+  color: var(--dark-gray);
+  background: var(--cream);
+  font: 17px/155% var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading);
+  color: var(--navy);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: 44px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+a {
+  color: var(--yale-blue);
+}
+
+button {
+  font-family: inherit;
+}

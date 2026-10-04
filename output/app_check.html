@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Campus Customs — App Check (Problem 11)</title>
+<style>
+  :root {
+    --navy: #0f2a4a;
+    --yale-blue: #00356b;
+    --cream: #f7f3ea;
+    --dark-gray: #2f2f35;
+    --muted-red: #8f3d3d;
+    --gold: #c7a86a;
+    --border: #ddd6c4;
+  }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    background: var(--yale-blue);
+    color: var(--cream);
+    padding: 32px 40px;
+    border-bottom: 4px solid var(--gold);
+  }
+  header h1 {
+    margin: 0 0 6px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+  }
+  header p {
+    margin: 0;
+    opacity: 0.85;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  .check {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  .check h2 {
+    margin: 0 0 4px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--navy);
+    font-size: 22px;
+  }
+  .check .subtitle {
+    margin: 0 0 16px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--muted-red);
+    font-weight: 700;
+  }
+  .check img {
+    width: 100%;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 14px;
+  }
+  .check p.caption {
+    margin: 0;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Campus Customs — Live App Check</h1>
+  <p>Problem 11: screenshots confirming three features work on the running site, with the dev server actually serving real data from campus_customs.db.</p>
+</header>
+
+<main>
+
+  <section class="check">
+    <p class="subtitle">Check 1 of 3</p>
+    <h2>Chat checking real inventory &amp; price</h2>
+    <img src="app_check_images/inventory_check.png" alt="Chat window showing a reply with the Yale Bowl T Shirt's price and per-size stock" />
+    <p class="caption">
+      Asked "Ask the Bulldog" how much the Yale Bowl T Shirt costs and whether it's in stock. The reply
+      ($32, with XS–XXL counts and XL correctly called out as out of stock) matches the real rows in the
+      <code>catalogue</code> and <code>inventory</code> tables exactly — nothing here is guessed by the AI.
+    </p>
+  </section>
+
+  <section class="check">
+    <p class="subtitle">Check 2 of 3</p>
+    <h2>Dynamic search-result cards from a category question</h2>
+    <img src="app_check_images/category_search_cards.png" alt="From your chat panel showing 8 real hoodie product cards after asking what hoodies are available" />
+    <p class="caption">
+      Asked "What hoodies do you have?" in chat. The assistant's text reply listed the hoodies, and — without
+      any extra click — a "From your chat" panel appeared on the page itself with 8 real hoodie cards
+      (photo, name, price), proving the category question actually drives a live update to the page, not
+      just the chat bubble.
+    </p>
+  </section>
+
+  <section class="check">
+    <p class="subtitle">Check 3 of 3</p>
+    <h2>Usability feature from Problem 9: product search &amp; filter</h2>
+    <img src="app_check_images/usability_search_filter.png" alt="Products page with the search box filled in with bulldog, narrowing 102 products down to 10" />
+    <p class="caption">
+      Typed "bulldog" into the Products page search box. The grid instantly narrowed from all 102 products
+      down to the 10 that actually mention "bulldog," with the running count ("10 of 102 products") updating
+      live — confirming the Problem 9 search/filter feature works in the running app.
+    </p>
+  </section>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+pydantic[email]
+python-dotenv
+openai
+pydantic-ai
