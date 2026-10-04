@@ -262,3 +262,13 @@ The assistant is told, in its instructions, to: stay focused on helping with Cam
 - Each single conversation turn can make at most 10 back-and-forth steps with the model before it's cut off, so it can never get stuck in an endless loop of tool calls.
 - A product search never returns more than 8 items at once, so replies stay short and readable instead of dumping the whole catalogue.
 - To run the whole site locally: start the backend first (from the `backend` folder), then the frontend (from the `frontend` folder) — both need to be running at the same time for the website to actually work, since the frontend is just a web page that talks to the backend over the network.
+
+## Problem 13 — Push to GitHub and submit URL
+
+Moved the project folder from `HW 4` to `HW4` (matching the required repo layout) and reorganized it to match the expected tree exactly: `requirements.txt` moved to the project root, `backend/prompts/prompts.md` renamed to `backend/prompts/prompt.md` (and every code/doc reference to it updated), and a root `.env.example`, `.gitignore`, and `README.md` added.
+
+**Kept out of the repo** (via `.gitignore`, verified with `git check-ignore` and `git ls-files` before ever committing): the real `.env`, the whole `data/` folder (`campus_customs.db` + `products/` images), the original `data.zip`, `backend/.venv/`, `frontend/node_modules/`, and `__pycache__`. Also scanned every tracked file's contents for the real API key string to confirm it isn't embedded anywhere (it isn't).
+
+`README.md` explains: prerequisites, where to get the `data/` folder and where to place it (`HW4/data/`), how to set up `.env` from `.env.example`, and the exact commands to install and run both the backend (`uvicorn main:app --reload --port 8000`) and the frontend (`npm install && npm run dev`).
+
+**Verified:** after the move, restarted the backend and frontend from the new `HW4` location and confirmed the database, the system prompt, and the AI agent all still load and work correctly (products endpoint returns all 102 items, chat still answers correctly) — the rename didn't break any file paths. Pushed to a public GitHub repo: **https://github.com/nshahid101/hw4** — confirmed public visibility and the correct top-level file list via the GitHub API.

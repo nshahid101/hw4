@@ -128,9 +128,10 @@ This file logs the prompts used while working through Problems 1–13. Each sect
 
 ---
 
-## Problem 13 —
+## Problem 13 — Push to GitHub and Submit URL
 
 **Prompt:**
+"I'm going to need to put my code in a folder name titled 'HW4' and will then need to push to a public GitHub repo. I'll need to ensure my real .env, campus_customs.db or product images are NOT in the GitHub repo. I'll need to use .gitignore to do so. Include .env.example with a placeholder only. The expected file layout is [screenshot]... The agent is 4 filed under backend/, prompts/prompt.md, agent.py, tools.py and models.py. READ.me should explain how to run the front end and back end after placing the data pack."
 
 **Follow-up prompt (if needed):**
 *What was lacking:*
